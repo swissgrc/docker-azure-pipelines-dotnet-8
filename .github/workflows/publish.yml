@@ -1,0 +1,24 @@
+name: Build
+
+on:
+  push:
+    branches: [develop]
+  release:
+    types: [published]
+  pull_request:
+    branches: [develop]
+
+jobs:
+  publish-image:
+    name: Build and push Docker image
+    uses: swissgrc/.github/.github/workflows/publish-image.yml@main
+    with:
+      image-name: swissgrc/azure-pipelines-dotnet
+      default-latest-tag: true
+      additional-latest-tag-name: 8
+      default-unstable-tag: true
+      additional-unstable-tag-name: 8-unstable
+    secrets:
+      gh-token: ${{ secrets.GITHUB_TOKEN }}
+      docker-username: ${{ secrets.DOCKER_USERNAME }}
+      docker-password: ${{ secrets.DOCKER_PASSWORD }}
