@@ -39,5 +39,6 @@ The following example shows the container used for a deployment step which shows
 | 8          | Identical to `latest` tag                                                                       |                                    |          | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-dotnet/8?style=flat-square)          |
 | unstable   | Latest unstable release (from `develop` branch)                                                 | swissgrc/azure-piplines-git:2.43.0 | 8.0.100  | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-dotnet/unstable?style=flat-square)   |
 | 8-unstable | Identical to `unstable` tag                                                                     |                                    |          | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-dotnet/8-unstable?style=flat-square) |
+| 8.0.100    | [.NET SDK 8.0.100](https://github.com/dotnet/core/blob/main/release-notes/8.0/8.0.0/8.0.0.md)   | swissgrc/azure-piplines-git:2.43.0 | 8.0.100  | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/swissgrc/azure-pipelines-dotnet/8.0.100?style=flat-square)    |
 
 [Azure Pipelines container jobs]: https://docs.microsoft.com/en-us/azure/devops/pipelines/process/container-phases
