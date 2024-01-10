@@ -11,7 +11,7 @@ FROM base AS build
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # renovate: datasource=repology depName=debian_12/curl versioning=loose
-ENV CURL_VERSION=7.88.1-10+deb12u4
+ENV CURL_VERSION=7.88.1-10+deb12u5
 
 RUN apt-get update -y && \
   # Install necessary dependencies
@@ -40,7 +40,7 @@ COPY --from=build /etc/apt/sources.list.d/ /etc/apt/sources.list.d
 # Install .NET 8
 
 # renovate: datasource=github-tags depName=dotnet/sdk extractVersion=^v(?<version>.*)$
-ENV DOTNET_VERSION=8.0.100
+ENV DOTNET_VERSION=8.0.101
 
 ENV \
     # Do not show first run text
