@@ -34,7 +34,7 @@ COPY --from=build /etc/apt/sources.list.d/ /etc/apt/sources.list.d
 # Install .NET 8
 
 # renovate: datasource=github-tags depName=dotnet/sdk extractVersion=^v(?<version>.*)$
-ENV DOTNET_VERSION=8.0.303
+ENV DOTNET_VERSION=8.0.400
 
 ENV \
     # Do not show first run text
