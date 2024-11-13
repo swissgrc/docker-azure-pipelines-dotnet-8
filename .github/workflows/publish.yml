@@ -14,9 +14,9 @@ jobs:
     uses: swissgrc/.github/.github/workflows/publish-image.yml@main
     with:
       image-name: swissgrc/azure-pipelines-dotnet
-      default-latest-tag: true
+      default-latest-tag: false
       additional-latest-tag-name: 8
-      default-unstable-tag: true
+      default-unstable-tag: false
       additional-unstable-tag-name: 8-unstable
     secrets:
       gh-token: ${{ secrets.GITHUB_TOKEN }}
