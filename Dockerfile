@@ -31,6 +31,18 @@ WORKDIR /
 COPY --from=build /usr/share/keyrings/microsoft-prod.gpg /usr/share/keyrings/microsoft-prod.gpg
 COPY --from=build /etc/apt/sources.list.d/ /etc/apt/sources.list.d
 
+# Install fontconfig
+
+# renovate: datasource=repology depName=debian_12/fontconfig versioning=deb
+ENV FONTCONFIG_VERSION=2.14.1-4
+
+RUN apt-get update -y && \
+  # Install necessary dependencies
+  apt-get install -y --no-install-recommends fontconfig=${FONTCONFIG_VERSION} && \
+  # Clean up
+  apt-get clean && \
+  rm -rf /var/lib/apt/lists/*
+
 # Install .NET 8
 
 # renovate: datasource=github-tags depName=dotnet/sdk extractVersion=^v(?<version>.*)$
