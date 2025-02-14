@@ -31,10 +31,11 @@ The following example shows the container used for a deployment step which shows
                     dotnet --version
 ```
 
-### Included Software
-- .Net SDK
+## Included Software
+- [swissgrc/azure-pipelines-git](https://github.com/swissgrc/docker-azure-pipelines-git) as base image
+- .NET 8 SDK
 
-### Tags
+## Tags
 
 | Tag        | Description                                         | Size                                                                                                                              |
 |------------|-----------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
