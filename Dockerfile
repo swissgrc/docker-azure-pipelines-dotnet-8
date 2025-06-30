@@ -1,5 +1,5 @@
 # Base image containing dependencies used in builder and final image
-FROM ghcr.io/swissgrc/azure-pipelines-git:2.49.0 AS base
+FROM ghcr.io/swissgrc/azure-pipelines-git:2.50.0 AS base
 
 # Make sure to fail due to an error at any stage in shell pipes
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
@@ -46,7 +46,7 @@ RUN apt-get update -y && \
 # Install .NET 8
 
 # renovate: datasource=github-tags depName=dotnet/sdk extractVersion=^v(?<version>.*)$
-ENV DOTNET_VERSION=8.0.410
+ENV DOTNET_VERSION=8.0.411
 
 ENV \
     # Do not show first run text
